@@ -1,0 +1,281 @@
+GET http://localhost:5000/users
+###
+GET http://localhost:5000/users/654a6c6d1c34b960208e9678
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username": "Rojal Maharjan",
+    "email": "rojma111@liu.se",
+    "password": "12345"
+}
+###
+POST   http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "email": "rojma113@liu.se",
+    "password": "12345"
+}
+###
+GET http://localhost:5000/forms/rojma111@liu.se
+###
+DELETE http://localhost:5000/forms/654bc95632ac908f1c52021c
+###
+GET  http://localhost:5000/forms/findOne/654e0329fdb302475c824b7a
+###
+POST http://localhost:5000/forms/post
+Content-Type: application/json
+
+{
+    "title":"Form 5",
+    "class": "http://w3id.org/CEON/ontology/construction/window/Window",
+    "userId": "654a6c6d1c34b960208e9678",
+    "isComplete": true,
+    "properties": [
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/windowDismounting",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasComponent",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/bodyTintedGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/containsAsbestos",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/containsPCB",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/enamelledGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/filmOnGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/fireGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/georgianBar",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/laminatedGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/manufacturingMonthYear",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/patternedGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/size",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/stampOnGlass",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/temperedGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/totalGlassThickness",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/wiredGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasFrameMaterial",
+            "value": [
+                "http://w3id.org/CEON/ontology/construction/window/wood"
+            ]
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasFrameCondition",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasLightTransmission",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasSoundReduction",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasUValue",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasWindowComposition",
+            "value": [
+                "http://w3id.org/CEON/ontology/construction/window/IGUonly"
+            ]
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasIntegratedBlind",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/solarControlGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/connected",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/door",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/windowDoor",
+            "value": "yes"
+        }
+    ]
+}
+###
+PATCH http://localhost:5000/forms/654bc9afdfe72b7f18a422d1
+Content-Type: application/json
+
+{
+    "class": "http://w3id.org/CEON/ontology/construction/window/Window",
+    "email": "rojma123@liu.se",
+    "isComplete": false,
+    "properties": [
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/windowDismounting",
+            "value": "hello"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasComponent",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/bodyTintedGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/containsAsbestos",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/containsPCB",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/enamelledGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/filmOnGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/fireGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/georgianBar",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/laminatedGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/manufacturingMonthYear",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/patternedGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/size",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/stampOnGlass",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/temperedGlass",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/totalGlassThickness",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/wiredGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasFrameMaterial",
+            "value": [
+                "http://w3id.org/CEON/ontology/construction/window/wood"
+            ]
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasFrameCondition",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasLightTransmission",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasSoundReduction",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasUValue",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasWindowComposition",
+            "value": [
+                "http://w3id.org/CEON/ontology/construction/window/IGUonly"
+            ]
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/hasIntegratedBlind",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/solarControlGlass",
+            "value": "no"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/connected",
+            "value": ""
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/door",
+            "value": "yes"
+        },
+        {
+            "name": "http://w3id.org/CEON/ontology/construction/window/windowDoor",
+            "value": "yes"
+        }
+    ]
+}
