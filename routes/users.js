@@ -6,15 +6,13 @@ const User = require('../models/user')
 router.post('/login', async (req, res) => {
   let user
   try {
-    user = await User.findOne(req.body, 'username email')
-    console.log(user)
+    user = await User.findOne(req.body, '_id')
     if (user == null) {
       return res.status(404).json({ message: 'Cannot find User' })
     }
   } catch (err) {
     return res.status(500).json({ errMessage: err.message })
   }
-
   res.json(user)
 })
 
@@ -26,8 +24,8 @@ router.post('/signup', async (req, res) => {
     password: req.body.password
   })
   try {
-    const newUser = await user.save()
-    res.status(201).json(newUser)
+    const {_id} = await user.save()
+    res.status(201).json({_id})
   } catch (err) {
     res.status(400).json({ message: err.message })
   }

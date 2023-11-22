@@ -24,7 +24,7 @@ router.post('/post', async (req, res) => {
   })
   try {
     const newForm = await form.save()
-    res.status(201).json(newForm)
+    res.status(201).json({ message: 'Form Saved' })
   } catch (err) {
     res.status(400).json({ message: err.message })
   }
@@ -51,7 +51,7 @@ router.patch('/patch/:id', getFormById, async (req, res) => {
   }
   try {
     const updatedForm = await res.form.save()
-    res.json(updatedForm)
+    res.json({ message: 'Form Updated' })
   } catch (err) {
     res.status(400).json({ message: err.message })
   }
